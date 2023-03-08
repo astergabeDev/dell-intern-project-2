@@ -1,0 +1,323 @@
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  max-width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+:root {
+  --grey: grey;
+  --darkblue: #00447c;
+  --lightblue: #0075d5;
+}
+.website-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3.125rem 56.25rem 50rem 62.5rem 3.125rem;
+  justify-content: center;
+}
+header {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--grey);
+  ion-icon {
+    font-size: 1.875rem;
+    color: var(--grey);
+  }
+  .logo-container {
+    .dell-logo {
+      max-width: 15.625rem;
+      width: 100%;
+    }
+  }
+  .search-icon {
+    font-size: 1.25rem;
+  }
+  .sandwich-logo {
+    display: flex;
+    align-items: center;
+    img {
+      margin-top: 0.3125rem;
+    }
+  }
+  .sandwich-icon {
+    font-size: 1.875rem;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+  }
+  .input-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.3125rem;
+    background-color: white;
+    border: 1px solid var(--grey);
+    border-radius: 0.1875rem;
+    width: 100%;
+    max-width: 32.5rem;
+    input {
+      border: none;
+      width: 90%;
+    }
+    .search-icon {
+      background: white;
+    }
+  }
+  .misc-container {
+    display: flex;
+    justify-content: space-between;
+    .icon {
+      margin: 0px 0.6rem;
+    }
+    .person {
+    }
+    .cart {
+    }
+  }
+}
+.main-container {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  * {
+    display: flex;
+    justify-content: center;
+  }
+  img {
+    max-width: 43.75rem;
+    width: 100%;
+  }
+  .buy-btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.625rem;
+  }
+
+  .buy-btn a {
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.875rem 0.75rem;
+    border-radius: 3px;
+  }
+  .right a {
+    background-color: #fff;
+    color: var(--darkblue);
+    border: 2px solid var(--darkblue);
+  }
+  .left a {
+    background-color: var(--darkblue);
+    color: #fff;
+    border: 2px solid var(--darkblue);
+  }
+
+  .buy-btn a:hover {
+    box-shadow: 1px 2px 5px #333;
+  }
+}
+.banner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .banner-block {
+    display: flex;
+    border-radius: 5px;
+    background-color: var(--darkblue);
+    box-shadow: 1px 2px 5px #333;
+  }
+  img {
+    max-width: 56.25rem;
+    width: 100%;
+  }
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    background-color: var(--darkblue);
+    h3 {
+      color: #fff;
+      font-weight: 300;
+    }
+    .about-btn {
+      a {
+        color: var(--darkblue);
+        font-size: 1rem;
+        font-weight: 400;
+        text-decoration: none;
+        padding: 0.625rem 1.25rem;
+        background-color: #fff;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .contact-block {
+    max-width: 700px;
+    width: 100%;
+    background-color: var(--darkblue);
+    box-shadow: 1px 2px 5px #333;
+    border-radius: 5px;
+    fieldset {
+      border: none;
+    }
+    .h1-container {
+      margin-bottom: 1.25rem;
+      width: 100%;
+      h1 {
+        text-align: center;
+        color: #fff;
+        font-weight: 300;
+      }
+    }
+    .block {
+      margin-bottom: 1.875rem;
+    }
+    .file {
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+    }
+    .input {
+      border: vertical;
+      font-size: 1.25rem;
+      width: 100%;
+      min-height: 2.8125rem;
+      height: 100%;
+      box-sizing: border-box;
+    }
+    .message {
+      resize: none;
+      min-height: 6.25rem;
+      font-family: sans-serif;
+    }
+    .name {
+      min-height: 2.8125rem;
+    }
+    .contact-label {
+      font-weight: 400;
+      color: #fff;
+    }
+    .send-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 3.125rem;
+      border-radius: 3px;
+      text-align: center;
+      background-color: #fff;
+      border: 1px solid var(--darkblue);
+      input {
+        background: none;
+        border: none;
+        color: var(--darkblue);
+        font-size: 1.25rem;
+        font-weight: 600;
+        text-decoration: none;
+      }
+    }
+  }
+}
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid var(--grey);
+  h4 {
+    font-weight: 300;
+  }
+}
+@media (max-width: 71.875rem) {
+  .banner-block {
+    flex-direction: column;
+    padding-bottom: 2.5rem;
+  }
+}
+@media (max-width: 65.625rem) {
+  header {
+    .person-icon {
+      font-size: 1.375rem;
+      margin-left: 0.625rem;
+      margin-right: 0.3125rem;
+    }
+    .cart-icon {
+      font-size: 1.375rem;
+      margin-left: 0.625rem;
+      margin-right: 0.3125rem;
+    }
+  }
+}
+@media (max-width: 48.0625rem) {
+  header {
+    .logo-container {
+      .dell-logo {
+        max-width: 0px;
+        width: 100%;
+      }
+    }
+    .person-icon {
+      font-size: 0.9375rem;
+      margin-left: 0.625rem;
+      margin-right: 0.3125rem;
+    }
+    .cart-icon {
+      font-size: 0.9375rem;
+      margin-left: 0.625rem;
+      margin-right: 0.3125rem;
+    }
+  }
+  .contact-container {
+    .contact-block {
+      max-width: 25rem;
+    }
+  }
+}
+@media (max-width: 34.75rem) {
+  header {
+    .misc-container {
+      display: flex;
+      justify-content: space-between;
+      .icon {
+        font-size: 1.4rem;
+      }
+    }
+  }
+  .banner-container {
+    margin: 0.9375rem;
+    text-align: center;
+  }
+  .contact-container {
+    .contact-block {
+      padding: 0.3125rem;
+      max-width: 25rem;
+    }
+    margin: 0.9375rem;
+    .h1-container {
+      justify-self: center;
+    }
+  }
+  .main-container {
+    margin: 0.9375rem;
+    text-align: center;
+  }
+}
+@media (max-width: 28.125rem) {
+  .website-container {
+    grid-template-rows: 3.125rem 43.75rem 31.25rem 56.25rem 3rem;
+  }
+  footer {
+    margin-top: 0.5rem;
+  }
+}

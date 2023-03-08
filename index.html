@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dell Technologies</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="website-container">
+        <header class="header-container">
+            <div class="sandwich-logo">
+                <div class="sandwich-container">
+                    <ion-icon class="sandwich-icon" name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="logo-container">
+                    <img class="dell-logo" src="logo.png" alt="dell-logo">
+                </div>
+            </div>
+            <div class="input-container">
+                <input placeholder="Pesquisar Dell" type="text" />
+                <span>
+                    <ion-icon class="search-icon" name="search-outline"></ion-icon>
+                </span>
+            </div>
+            <div class="misc-container">
+                <span>
+                    <ion-icon class="person icon" name="person-outline"></ion-icon>
+                </span>
+                <span>
+                    <ion-icon class="cart icon" name="cart-outline"></ion-icon>
+                </span>
+            </div>
+        </header>
+        <div class="main-container">
+            <div class="img-container">
+                <img src="product.png" alt="product">
+            </div>
+            <h1>XPS Laptops & 2-in-1 PCs</h1>
+            <p>Power your passions with premium, precision-crafted laptops with innovative features.</p>
+            <h2> STARTING AT $799.00</h2>
+            <div class="buy-btn-container">
+                <div class="buy-btn left">
+                    <a href="#" target="_blank">Buy XPS models</a>
+                </div>
+                <div class="buy-btn right" target="_blank">
+                    <a href="#">View XPS models</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="banner-container">
+            <div class="banner-block">
+                <img src="banner.png" alt="man-using dells pc">
+                <div class="about-container">
+                    <h3>Find the right XPS for you</h3>
+                    <div class="about-btn">
+                        <a href="#">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact-container">
+            <form class="contact-block">
+                <div class="h1-container">
+                    <h1>Contact Us</h1>
+                </div>
+                <fieldset>
+                    <div class="name block">
+                        <label for="name" id="name" name="user_name" class="contact-label">Your Name</label>
+                        <input class="name input" type="text" id="name" name="user_name" placeholder="Your Name" />
+                    </div>
+                    <div class="email block">
+                        <label for="email" id="email" name="user_email" class="contact-label">Your Email</label>
+                        <input class="email input" type="email" id="email" name="user_email" placeholder="Your Email" />
+                    </div>
+                    <div class="ratio block">
+                        <label for="ratio" id="ratio" name="user_ratio" class="contact-label">Are you a Dell
+                            Employee</label>
+                        <div class="ratio-block">
+                            <input type="radio" id="yes" name="ratio" value="yes">
+                            <label class="contact-label" for="yes">Yes</label><br>
+                            <input type="radio" id="no" name="ratio" value="no">
+                            <label class="contact-label" for="no">No</label><br>
+                        </div>
+                    </div>
+                    <div class="role block">
+                        <label for="role" id="role" name="user_role" class="contact-label">What role do you
+                            perform?</label>
+                        <div>
+                            <input type="checkbox" id="option1" name="option1" value="Design">
+                            <label class="contact-label" for="option1"> Design</label><br>
+                            <input type="checkbox" id="option2" name="option2" value="Engineering">
+                            <label class="contact-label" for="option2"> Engineering</label><br>
+                            <input type="checkbox" id="option3" name="option3" value="Pm">
+                            <label class="contact-label" for="option3"> Product Management</label>
+                        </div>
+                    </div>
+                    <div class="file block">
+                        <label class="contact-label" for="myfile">Upload You CV</label>
+                        <input type="file" accept="application/pdf" id="myfile" name="myfile">
+                    </div>
+                    <div class="message block">
+                        <label for="message" id="message" name="user_name" class="contact-label">Your Message</label>
+                        <textarea class="message input" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="send-btn">
+                        <input type="submit" value="Send Message" />
+                    </div>
+                </fieldset>
+            </form>
+
+        </div>
+        <footer class="footer-container">
+            <h4>Design by - Gabriel Fernandes</h4>
+        </footer>
+
+    </div>
+</body>
+
+</html>
