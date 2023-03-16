@@ -40,7 +40,7 @@ header {
     display: flex;
     align-items: center;
     img {
-      margin-top: 0.3125rem;
+      margin-top: .3125rem;
     }
   }
   .sandwich-icon {
@@ -71,10 +71,6 @@ header {
     justify-content: space-between;
     .icon {
       margin: 0px 0.6rem;
-    }
-    .person {
-    }
-    .cart {
     }
   }
 }

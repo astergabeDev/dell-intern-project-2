@@ -67,43 +67,43 @@
             </div>
         </div>
         <div class="contact-container">
-            <form class="contact-block">
+            <form id="contact-form" class="contact-block">
                 <div class="h1-container">
                     <h1>Contact Us</h1>
                 </div>
                 <fieldset>
                     <div class="name block">
-                        <label for="name" id="name" name="user_name" class="contact-label">Your Name</label>
+                        <label for="name" name="user_name" class="contact-label">Your Name</label>
                         <input class="name input" type="text" id="name" name="user_name" placeholder="Your Name" />
                     </div>
                     <div class="email block">
-                        <label for="email" id="email" name="user_email" class="contact-label">Your Email</label>
+                        <label for="email" name="user_email" class="contact-label">Your Email</label>
                         <input class="email input" type="email" id="email" name="user_email" placeholder="Your Email" />
                     </div>
-                    <div class="ratio block">
-                        <label for="ratio" id="ratio" name="user_ratio" class="contact-label">Are you a Dell
-                            Employee</label>
-                        <div class="ratio-block">
-                            <input type="radio" id="yes" name="ratio" value="yes">
-                            <label class="contact-label" for="yes">Yes</label><br>
-                            <input type="radio" id="no" name="ratio" value="no">
-                            <label class="contact-label" for="no">No</label><br>
+                    <div class="radio block">
+                        <label for="radio" class="contact-label">Are you a Dell
+                            Employee?</label>
+                        <div class="radio-block">
+                            <input type="radio" id="yes" name="radioGroup" value="yes">
+                            <label class="contact-label" for="radio">Yes</label><br>
+                            <input type="radio" id="no" name="radioGroup" value="no">
+                            <label class="contact-label" for="radio">No</label><br>
                         </div>
                     </div>
                     <div class="role block">
-                        <label for="role" id="role" name="user_role" class="contact-label">What role do you
+                        <label for="checkbox" class="contact-label">What role do you
                             perform?</label>
-                        <div>
-                            <input type="checkbox" id="option1" name="option1" value="Design">
-                            <label class="contact-label" for="option1"> Design</label><br>
-                            <input type="checkbox" id="option2" name="option2" value="Engineering">
-                            <label class="contact-label" for="option2"> Engineering</label><br>
-                            <input type="checkbox" id="option3" name="option3" value="Pm">
-                            <label class="contact-label" for="option3"> Product Management</label>
+                        <div class="checkbox-block">
+                            <input type="checkbox" id="design" name="checkboxGroup" value="design">
+                            <label class="contact-label"> Design</label><br>
+                            <input type="checkbox" id="engineering" name="checkboxGroup" value="engineering">
+                            <label class="contact-label"> Engineering</label><br>
+                            <input type="checkbox" id="pm" name="checkboxGroup" value="pm">
+                            <label class="contact-label"> Product Management</label>
                         </div>
                     </div>
                     <div class="file block">
-                        <label class="contact-label" for="myfile">Upload You CV</label>
+                        <label class="contact-label" for="myfile">Upload You CV (Optional)</label>
                         <input type="file" accept="application/pdf" id="myfile" name="myfile">
                     </div>
                     <div class="message block">
@@ -111,7 +111,7 @@
                         <textarea id="message" class="message input" cols="30" rows="10"></textarea>
                     </div>
                     <div class="send-btn">
-                        <input type="submit" value="Send Message" />
+                        <input type="submit" value="Send Feedback" />
                     </div>
                 </fieldset>
             </form>
@@ -122,6 +122,7 @@
         </footer>
 
     </div>
+    <script src="/src/index.js"></script>
 </body>
 
 </html>

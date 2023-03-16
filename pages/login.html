@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="/styles/style.css">
+  <meta charset="UTF-8">
+  <title>Login - Dell Technologies</title>
+</head>
+
+<body>
+  <form id="cadastroForm" action="#" onsubmit="return validarForm()">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required>
+
+    <label for="birthdate">Birthdate:</label>
+    <input type="date" id="birthdate" name="birthdate" max="2030-12-31" required>
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" readonly required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+    <input type="submit" value="Enviar">
+    <input type="button" value="Limpar Formulário" onclick="limparFormulario()">
+
+    <div id="senhaErro" class="error"></div>
+    <div id="dataErro" class="error"></div>
+  </form>
+
+  <script src="/src/index.js">
+  </script>
+</body>
+
+</html>
