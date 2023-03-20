@@ -7,16 +7,13 @@ function isValidEmail(email) {
 
 function ratioCheck() {
   var ratioButtons = document.getElementsByName("radioGroup");
-  console.log(ratioButtons);
 
   for (var i = 0; i < ratioButtons.length; i++) {
     if (ratioButtons[i].checked) {
-      console.log(ratioButtons);
       return true;
     }
   }
   alert("Please check if you are/aren't a dell employee");
-  console.log(ratioButtons);
   return false;
 }
 
@@ -62,9 +59,8 @@ form.addEventListener("submit", function (event) {
 
   // Se chegou aqui, o formulário foi validado com sucesso
   alert("Feedback form submited sucessfully");
-
-  // Redireciona o usuário para a página de sucesso
-  //window.location.href = 'sucesso.html';
+  // Redireciona o usuário para a página de acesso
+  window.location.href = 'login.html';
 });
 
 function validarForm() {
