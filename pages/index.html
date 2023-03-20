@@ -30,9 +30,9 @@
                 </span>
             </div>
             <div class="misc-container">
-                <span>
+                <a href="login.html">
                     <ion-icon class="person icon" name="person-outline"></ion-icon>
-                </span>
+                </a>
                 <span>
                     <ion-icon class="cart icon" name="cart-outline"></ion-icon>
                 </span>
@@ -50,7 +50,39 @@
                     <a href="#" target="_blank">Buy XPS models</a>
                 </div>
                 <div class="buy-btn right" target="_blank">
-                    <a href="#">View XPS models</a>
+                    <a href="#" onclick="abrirModal()">View XPS models</a>
+                </div>
+            </div>
+        </div>
+        <div class="modal-container">
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="fechar" onclick="fecharModal()">&times;</span>
+                    <div class="modal-label">
+                        <h2>Lista de laptops e valores</h2>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Laptop</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lenovo Ideapad</td>
+                                <td>R$ 3.000,00</td>
+                            </tr>
+                            <tr>
+                                <td>Dell Inspiron</td>
+                                <td>R$ 4.500,00</td>
+                            </tr>
+                            <tr>
+                                <td>Asus VivoBook</td>
+                                <td>R$ 3.800,00</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

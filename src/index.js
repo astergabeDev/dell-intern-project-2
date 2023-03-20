@@ -60,7 +60,7 @@ form.addEventListener("submit", function (event) {
   // Se chegou aqui, o formulário foi validado com sucesso
   alert("Feedback form submited sucessfully");
   // Redireciona o usuário para a página de acesso
-  window.location.href = 'login.html';
+  window.location.href = "login.html";
 });
 
 function validarForm() {
@@ -73,6 +73,8 @@ function validarForm() {
     return false;
   } else {
     senhaErro.innerHTML = "";
+    window.location.href = "index.html";
+    alert("Cadastro feito com sucesso!");
     return true;
   }
 }
@@ -82,22 +84,15 @@ function limparFormulario() {
   document.getElementById("username").value = "";
 }
 
-var firstNameInput = document.getElementById("firstName");
-var lastNameInput = document.getElementById("lastName");
-var usernameInput = document.getElementById("username");
-
-firstNameInput.addEventListener("input", atualizarUsername);
-lastNameInput.addEventListener("input", atualizarUsername);
-
 function atualizarUsername() {
-  var firstName = firstNameInput.value;
-  var lastName = lastNameInput.value;
+  var firstNameInput = document.getElementById("firstName").value;
+  var lastNameInput = document.getElementById("lastName").value;
+  var usernameInput = document.getElementById("username");
 
-  usernameInput.value = (firstName + lastName)
+  usernameInput.value = (firstNameInput + lastNameInput)
     .toLowerCase()
     .replace(/\s+/g, "");
 }
-
 var birthdateInput = document.getElementById("birthdate");
 var dataErro = document.getElementById("dataErro");
 
@@ -113,4 +108,11 @@ function validarData() {
   } else {
     dataErro.innerHTML = "";
   }
+}
+function abrirModal() {
+  document.getElementById("modal").style.display = "block";
+}
+
+function fecharModal() {
+  document.getElementById("modal").style.display = "none";
 }
