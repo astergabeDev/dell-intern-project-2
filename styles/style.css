@@ -116,7 +116,10 @@ header .misc-container .icon {
   box-shadow: 1px 2px 5px #333;
 }
 
-.modal-container .modal {
+#modal-container {
+  display: none;
+}
+#modal-container .modal {
   position: fixed;
   z-index: 1;
   left: 0;
@@ -126,7 +129,7 @@ header .misc-container .icon {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
 }
-.modal-container .modal .modal-content {
+#modal-container .modal .modal-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -136,18 +139,26 @@ header .misc-container .icon {
   border: 1px solid #888;
   width: 80%;
 }
-.modal-container .modal .modal-content .modal-label {
+#modal-container .modal .modal-content .table {
   text-align: center;
-  background-color: red;
+  border: 1px solid #00447c;
+  border-radius: 5px;
 }
-.modal-container .modal .modal-content .fechar {
+#modal-container .modal .modal-content .modal-label {
+  text-align: center;
+  color: #00447c;
+  border-radius: 5px;
+  border: 1px solid var(--darkblue);
+  margin-bottom: 5px;
+}
+#modal-container .modal .modal-content .fechar {
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
-.modal-container .modal .modal-content .fechar:hover,
-.modal-container .modal .modal-content .fechar:focus {
+#modal-container .modal .modal-content .fechar:hover,
+#modal-container .modal .modal-content .fechar:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;

@@ -115,7 +115,8 @@ header {
     box-shadow: 1px 2px 5px #333;
   }
 }
-.modal-container {
+#modal-container {
+  display: none;
   .modal {
     position: fixed;
     z-index: 1;
@@ -134,9 +135,17 @@ header {
       padding: 20px;
       border: 1px solid #888;
       width: 80%;
+      .table {
+        text-align: center;
+        border: 1px solid #00447c;
+        border-radius: 5px;
+      }
       .modal-label {
         text-align: center;
-        background-color: red;
+        color: #00447c;
+        border-radius: 5px;
+        border: 1px solid var(--darkblue);
+        margin-bottom: 5px;
       }
       .fechar {
         color: #aaa;

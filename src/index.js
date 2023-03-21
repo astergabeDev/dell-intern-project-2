@@ -1,3 +1,4 @@
+
 function isValidEmail(email) {
   // Expressão regular para verificar se o formato do e-mail é válido
   const emailChar = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -110,9 +111,9 @@ function validarData() {
   }
 }
 function abrirModal() {
-  document.getElementById("modal").style.display = "block";
+  document.getElementById("modal-container").style.display = "block";
 }
 
 function fecharModal() {
-  document.getElementById("modal").style.display = "none";
+  document.getElementById("modal-container").style.display = "none";
 }
