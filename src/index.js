@@ -1,6 +1,5 @@
 
 function isValidEmail(email) {
-  // Expressão regular para verificar se o formato do e-mail é válido
   const emailChar = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   return emailChar.test(email);
@@ -26,17 +25,15 @@ function checkboxCheck() {
       return true;
     }
   }
-
-  // nenhum botão foi selecionado
   alert("Please check your role");
   return false;
 }
 
 const form = document.querySelector("#contact-form");
 form.addEventListener("submit", function (event) {
-  event.preventDefault(); // Impede que o formulário seja enviado
+  event.preventDefault(); // Impede que o form seja enviado
 
-  // Validação do campo de nome
+ 
   const nameField = document.querySelector("#name");
   if (nameField.value === "") {
     alert("Please, type your name.");
@@ -44,7 +41,6 @@ form.addEventListener("submit", function (event) {
     return false;
   }
 
-  // Validação do campo de e-mail
   const emailField = document.querySelector("#email");
   if (!isValidEmail(emailField.value)) {
     alert("Please, type a valid email.");
@@ -58,9 +54,7 @@ form.addEventListener("submit", function (event) {
     return false;
   }
 
-  // Se chegou aqui, o formulário foi validado com sucesso
   alert("Feedback form submited sucessfully");
-  // Redireciona o usuário para a página de acesso
   window.location.href = "login.html";
 });
 

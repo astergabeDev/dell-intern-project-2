@@ -144,6 +144,9 @@ header .misc-container .icon {
   border: 1px solid #00447c;
   border-radius: 5px;
 }
+#modal-container .modal .modal-content .table .thead {
+  border: 1px solid #00447c;
+}
 #modal-container .modal .modal-content .modal-label {
   text-align: center;
   color: #00447c;
