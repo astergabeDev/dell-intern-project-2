@@ -16,11 +16,13 @@
   <div class="login-container">
     <div class="login-block">
       <form id="cadastroForm" class="login-form" action="#" onsubmit="return validarForm()">
-        <label class="login-title" for="firstName">First Name:</label>
-        <input class="login-input" type="text" id="firstName" name="firstName" required>
+        <div class="name-input">
+          <label class="login-title" for="firstName">First Name:</label>
+          <input class="login-input" type="text" id="firstName" name="firstName" required>
 
-        <label class="login-title" for="lastName">Last Name:</label>
-        <input class="login-input" type="text" id="lastName" name="lastName" required>
+          <label class="login-title" for="lastName">Last Name:</label>
+          <input class="login-input" type="text" id="lastName" name="lastName" required>
+        </div>
 
         <label class="login-title" for="birthdate">Birthdate:</label>
         <input class="login-input" type="date" id="birthdate" name="birthdate" max="2023-12-31" required>

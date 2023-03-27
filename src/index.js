@@ -112,5 +112,3 @@ function fecharModal() {
   document.getElementById("modal-container").style.display = "none";
 }
 
-//make the css for the login page
-//make the css for the login page

@@ -1,7 +1,7 @@
 html,
 body {
-  margin: 0px;
-  padding: 0px;
+  margin: 0rem;
+  padding: 0rem;
   box-sizing: border-box;
   max-width: 100%;
   font-family: Arial, Helvetica, sans-serif;
@@ -14,7 +14,7 @@ body {
 .website-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 3.125rem 56.25rem 50rem 62.5rem 3.125rem;
+  grid-template-rows: 50px 900px 800px 1000px 50px;
   justify-content: center;
 }
 header {
@@ -22,42 +22,42 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--grey);
+  border-bottom: 0.0625rem solid var(--grey);
   ion-icon {
-    font-size: 1.875rem;
+    font-size: 30px;
     color: var(--grey);
   }
   .logo-container {
     .dell-logo {
-      max-width: 15.625rem;
+      max-width: 250px;
       width: 100%;
     }
   }
   .search-icon {
-    font-size: 1.25rem;
+    font-size: 20px;
   }
   .sandwich-logo {
     display: flex;
     align-items: center;
     img {
-      margin-top: 0.3125rem;
+      margin-top: 5px;
     }
   }
   .sandwich-icon {
-    font-size: 1.875rem;
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
   .input-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.3125rem;
+    padding: 5px;
     background-color: white;
-    border: 1px solid var(--grey);
-    border-radius: 0.1875rem;
+    border: 0.0625rem solid var(--grey);
+    border-radius: 3px;
     width: 100%;
-    max-width: 32.5rem;
+    max-width: 520px;
     input {
       border: none;
       width: 90%;
@@ -70,7 +70,7 @@ header {
     display: flex;
     justify-content: space-between;
     .icon {
-      margin: 0px 0.6rem;
+      margin: 0rem 9.6px;
     }
   }
 }
@@ -84,35 +84,35 @@ header {
     justify-content: center;
   }
   img {
-    max-width: 43.75rem;
+    max-width: 700px;
     width: 100%;
   }
   .buy-btn-container {
     display: flex;
     justify-content: center;
-    gap: 0.625rem;
+    gap: 10px;
   }
 
   .buy-btn a {
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     text-decoration: none;
-    padding: 0.875rem 0.75rem;
-    border-radius: 3px;
+    padding: 14px 12px;
+    border-radius: 0.1875rem;
   }
   .right a {
     background-color: #fff;
     color: var(--darkblue);
-    border: 2px solid var(--darkblue);
+    border: 0.125rem solid var(--darkblue);
   }
   .left a {
     background-color: var(--darkblue);
     color: #fff;
-    border: 2px solid var(--darkblue);
+    border: 0.125rem solid var(--darkblue);
   }
 
   .buy-btn a:hover {
-    box-shadow: 1px 2px 5px #333;
+    box-shadow: 0.0625rem 0.125rem 0.3125rem #333;
   }
 }
 #modal-container {
@@ -132,28 +132,28 @@ header {
       justify-content: center;
       background-color: #fefefe;
       margin: 10% auto;
-      padding: 20px;
-      border: 1px solid #888;
+      padding: 1.25rem;
+      border: 0.0625rem solid #888;
       width: 80%;
       .table {
         text-align: center;
-        border: 1px solid #00447c;
-        border-radius: 5px;
+        border: 0.0625rem solid #00447c;
+        border-radius: 0.3125rem;
         .thead {
-          border: 1px solid #00447c;
+          border: 0.0625rem solid #00447c;
         }
       }
       .modal-label {
         text-align: center;
         color: #00447c;
-        border-radius: 5px;
-        border: 1px solid var(--darkblue);
-        margin-bottom: 5px;
+        border-radius: 0.3125rem;
+        border: 0.0625rem solid var(--darkblue);
+        margin-bottom: 0.3125rem;
       }
       .fechar {
         color: #aaa;
         float: right;
-        font-size: 28px;
+        font-size: 1.75rem;
         font-weight: bold;
       }
       .fechar:hover,
@@ -171,12 +171,12 @@ header {
   justify-content: center;
   .banner-block {
     display: flex;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
     background-color: var(--darkblue);
-    box-shadow: 1px 2px 5px #333;
+    box-shadow: 0.0625rem 0.125rem 0.3125rem #333;
   }
   img {
-    max-width: 56.25rem;
+    max-width: 900px;
     width: 100%;
   }
   .about-container {
@@ -184,8 +184,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
+    margin-left: 40px;
+    margin-right: 40px;
     background-color: var(--darkblue);
     h3 {
       color: #fff;
@@ -194,12 +194,12 @@ header {
     .about-btn {
       a {
         color: var(--darkblue);
-        font-size: 1rem;
+        font-size: 16px;
         font-weight: 400;
         text-decoration: none;
-        padding: 0.625rem 1.25rem;
+        padding: 10px 20px;
         background-color: #fff;
-        border-radius: 3px;
+        border-radius: 0.1875rem;
       }
     }
   }
@@ -210,16 +210,16 @@ header {
   justify-content: center;
   flex-direction: column;
   .contact-block {
-    max-width: 700px;
+    max-width: 43.75rem;
     width: 100%;
     background-color: var(--darkblue);
-    box-shadow: 1px 2px 5px #333;
-    border-radius: 5px;
+    box-shadow: 0.0625rem 0.125rem 0.3125rem #333;
+    border-radius: 0.3125rem;
     fieldset {
       border: none;
     }
     .h1-container {
-      margin-bottom: 1.25rem;
+      margin-bottom: 20px;
       width: 100%;
       h1 {
         text-align: center;
@@ -228,7 +228,7 @@ header {
       }
     }
     .block {
-      margin-bottom: 1.875rem;
+      margin-bottom: 30px;
     }
     .file {
       color: #fff;
@@ -237,19 +237,19 @@ header {
     }
     .input {
       border: vertical;
-      font-size: 1.25rem;
+      font-size: 20px;
       width: 100%;
-      min-height: 2.8125rem;
+      min-height: 45px;
       height: 100%;
       box-sizing: border-box;
     }
     .message {
       resize: none;
-      min-height: 6.25rem;
+      min-height: 100px;
       font-family: sans-serif;
     }
     .name {
-      min-height: 2.8125rem;
+      min-height: 45px;
     }
     .contact-label {
       font-weight: 400;
@@ -259,16 +259,16 @@ header {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 3.125rem;
-      border-radius: 3px;
+      height: 50px;
+      border-radius: 0.1875rem;
       text-align: center;
       background-color: #fff;
-      border: 1px solid var(--darkblue);
+      border: 0.0625rem solid var(--darkblue);
       input {
         background: none;
         border: none;
         color: var(--darkblue);
-        font-size: 1.25rem;
+        font-size: 20px;
         font-weight: 600;
         text-decoration: none;
       }
@@ -280,98 +280,101 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid var(--grey);
+  border-top: 0.0625rem solid var(--grey);
   h4 {
     font-weight: 300;
   }
 }
-@media (max-width: 71.875rem) {
+@media (max-width: 1150px) {
   .banner-block {
     flex-direction: column;
-    padding-bottom: 2.5rem;
+    padding-bottom: 40px;
   }
 }
-@media (max-width: 65.625rem) {
+@media (max-width: 1050px) {
   header {
     .person-icon {
-      font-size: 1.375rem;
-      margin-left: 0.625rem;
-      margin-right: 0.3125rem;
+      font-size: 22px;
+      margin-left: 10px;
+      margin-right: 5px;
     }
     .cart-icon {
-      font-size: 1.375rem;
-      margin-left: 0.625rem;
-      margin-right: 0.3125rem;
+      font-size: 22px;
+      margin-left: 10px;
+      margin-right: 5px;
     }
   }
 }
-@media (max-width: 48.0625rem) {
+@media (max-width: 769px) {
   header {
     .logo-container {
       .dell-logo {
-        max-width: 0px;
+        max-width: 0rem;
         width: 100%;
       }
     }
     .person-icon {
-      font-size: 0.9375rem;
-      margin-left: 0.625rem;
-      margin-right: 0.3125rem;
+      font-size: 15px;
+      margin-left: 10px;
+      margin-right: 5px;
     }
     .cart-icon {
-      font-size: 0.9375rem;
-      margin-left: 0.625rem;
-      margin-right: 0.3125rem;
+      font-size: 15px;
+      margin-left: 10px;
+      margin-right: 5px;
     }
   }
   .contact-container {
     .contact-block {
-      max-width: 25rem;
+      max-width: 400px;
     }
   }
 }
-@media (max-width: 34.75rem) {
+@media (max-width: 556px) {
   header {
     .misc-container {
       display: flex;
       justify-content: space-between;
       .icon {
-        font-size: 1.4rem;
+        font-size: 22.4px;
       }
     }
   }
   .banner-container {
-    margin: 0.9375rem;
+    margin: 15px;
     text-align: center;
   }
   .contact-container {
     .contact-block {
-      padding: 0.3125rem;
-      max-width: 25rem;
+      padding: 5px;
+      max-width: 400px;
     }
-    margin: 0.9375rem;
+    margin: 15px;
     .h1-container {
       justify-self: center;
     }
   }
   .main-container {
-    margin: 0.9375rem;
+    margin: 15px;
     text-align: center;
   }
 }
-@media (max-width: 28.125rem) {
+@media (max-width: 450px) {
   .website-container {
-    grid-template-rows: 3.125rem 43.75rem 31.25rem 56.25rem 3rem;
+    grid-template-rows: 50px 700px 500px 900px 48px;
   }
   footer {
-    margin-top: 0.5rem;
+    margin-top: 8px;
   }
 }
 .login-body {
   display: flex;
+  align-self: center;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 100vh;
+  margin: 0;
   .login-container {
     display: flex;
     flex-direction: column;
@@ -383,48 +386,68 @@ header {
       align-items: center;
       justify-content: center;
       background-color: var(--darkblue);
-      box-shadow: 1px 2px 5px #333;
-      border-radius: 5px;
-      width: 25rem;
+      box-shadow: 0.0625rem 0.125rem 0.3125rem #333;
+      border-radius: 0.3125rem;
+      width: 600px;
       .login-title {
-        margin-bottom: 1.25rem;
-        h1 {
-          color: #fff;
-          font-weight: 300;
-        }
+        justify-self: start;
+        margin: 0 0.8rem 0.8rem 0.8rem;
+        color: white;
       }
       .login-form {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin-top: 16px;
+        width: 93%;
+        #birthdate {
+          width: 40%;
+        }
+        .name-input {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 100%;
+          .first-name {
+            width: 45%;
+          }
+          .last-name {
+            width: 45%;
+          }
+        }
         .login-input {
-          margin-bottom: 1.25rem;
+          border-radius: 0.3rem;
+          margin-bottom: 20px;
+          width: 100%;
+          height: 32px;
+
           input {
             border: none;
-            border-bottom: 1px solid #fff;
+            border-bottom: 0.0625rem solid #fff;
             background-color: var(--darkblue);
             color: #fff;
-            font-size: 1.25rem;
+            font-size: 20px;
             font-weight: 300;
-            width: 15rem;
-            height: 2.5rem;
+            width: 240px;
           }
         }
         .login-btn {
           display: flex;
           justify-content: center;
           align-items: center;
-          height: 3.125rem;
-          border-radius: 3px;
+          height: 50px;
+          width: 40%;
+          border-radius: 0.1875rem;
           text-align: center;
           background-color: #fff;
-          border: 1px solid var(--darkblue);
+          border: 0.0625rem solid var(--darkblue);
+          margin-bottom: 1rem;
           input {
             background: none;
             border: none;
             color: var(--darkblue);
-            font-size: 1.25rem;
+            font-size: 20px;
             font-weight: 600;
             text-decoration: none;
           }
