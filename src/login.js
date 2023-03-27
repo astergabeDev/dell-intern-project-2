@@ -3,23 +3,20 @@ const loginForm = document.querySelector(".login-form");
 loginForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  // Verifica se todos os campos obrigatórios foram preenchidos
   const allFields = document.querySelectorAll(".login-input");
   allFields.forEach((field) => {
     if (field.value.trim() === "") {
-      field.classList.add("error"); // Adiciona a classe 'error' ao campo vazio
+      field.classList.add("error");
     } else {
-      field.classList.remove("error"); // Remove a classe 'error' do campo preenchido
+      field.classList.remove("error");
     }
   });
 
-  // Se algum campo obrigatório estiver vazio, não continua com o envio do formulário
   const emptyFields = document.querySelectorAll(".login-input.error");
   if (emptyFields.length > 0) {
     return false;
   }
 
-  // Se todos os campos obrigatórios foram preenchidos, continua com o envio do formulário
   var senha = document.getElementById("password").value;
   var confirmSenha = document.getElementById("confirmPassword").value;
   var senhaErro = document.getElementById("senhaErro");

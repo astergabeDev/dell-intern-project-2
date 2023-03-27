@@ -61,6 +61,9 @@ body {
   outline: none;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
+.login-container .login-block .login-input.error {
+  border: 0.0625rem solid red;
+}
 .login-container .login-block #senhaErro,
 .login-container .login-block #dataErro {
   color: red;
