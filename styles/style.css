@@ -360,5 +360,71 @@ header .misc-container .icon {
     margin-top: 0.5rem;
   }
 }
+.login-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.login-body .login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login-body .login-container .login-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--darkblue);
+  box-shadow: 1px 2px 5px #333;
+  border-radius: 5px;
+  width: 25rem;
+}
+.login-body .login-container .login-block .login-title {
+  margin-bottom: 1.25rem;
+}
+.login-body .login-container .login-block .login-title h1 {
+  color: #fff;
+  font-weight: 300;
+}
+.login-body .login-container .login-block .login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login-body .login-container .login-block .login-form .login-input {
+  margin-bottom: 1.25rem;
+}
+.login-body .login-container .login-block .login-form .login-input input {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background-color: var(--darkblue);
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 300;
+  width: 15rem;
+  height: 2.5rem;
+}
+.login-body .login-container .login-block .login-form .login-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.125rem;
+  border-radius: 3px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid var(--darkblue);
+}
+.login-body .login-container .login-block .login-form .login-btn input {
+  background: none;
+  border: none;
+  color: var(--darkblue);
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+}
 
 /*# sourceMappingURL=style.css.map */
