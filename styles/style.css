@@ -1,7 +1,7 @@
 html,
 body {
-  margin: 0rem;
-  padding: 0rem;
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
   max-width: 100%;
   font-family: Arial, Helvetica, sans-serif;
@@ -10,7 +10,7 @@ body {
 .website-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 50px 900px 800px 1000px 50px;
+  grid-template-rows: 3.125rem 56.25rem 50rem 62.5rem 3.125rem;
   justify-content: center;
 }
 
@@ -19,41 +19,41 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 0.0625rem solid #333;
+  border-bottom: 1px solid #333;
 }
 header ion-icon {
-  font-size: 30px;
+  font-size: 1.875rem;
   color: #333;
 }
 header .logo-container .dell-logo {
-  max-width: 250px;
+  max-width: 15.625rem;
   width: 100%;
 }
 header .search-icon {
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 header .sandwich-logo {
   display: flex;
   align-items: center;
 }
 header .sandwich-logo img {
-  margin-top: 5px;
+  margin-top: 0.3125rem;
 }
 header .sandwich-icon {
-  font-size: 30px;
-  margin-left: 20px;
-  margin-right: 20px;
+  font-size: 1.875rem;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
 }
 header .input-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5px;
+  padding: 0.3125rem;
   background-color: white;
-  border: 0.0625rem solid #333;
-  border-radius: 3px;
+  border: 1px solid #333;
+  border-radius: 0.1875rem;
   width: 100%;
-  max-width: 520px;
+  max-width: 32.5rem;
 }
 header .input-container input {
   border: none;
@@ -67,7 +67,7 @@ header .misc-container {
   justify-content: space-between;
 }
 header .misc-container .icon {
-  margin: 0rem 9.6px;
+  margin: 0px 0.6rem;
 }
 
 .main-container {
@@ -81,33 +81,33 @@ header .misc-container .icon {
   justify-content: center;
 }
 .main-container img {
-  max-width: 700px;
+  max-width: 43.75rem;
   width: 100%;
 }
 .main-container .buy-btn-container {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 0.625rem;
 }
 .main-container .buy-btn a {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
-  padding: 14px 12px;
-  border-radius: 0.1875rem;
+  padding: 0.875rem 0.75rem;
+  border-radius: 3px;
 }
 .main-container .right a {
   background-color: #fff;
   color: #006699;
-  border: 0.125rem solid #006699;
+  border: 2px solid #006699;
 }
 .main-container .left a {
   background-color: #006699;
   color: #fff;
-  border: 0.125rem solid #006699;
+  border: 2px solid #006699;
 }
 .main-container .buy-btn a:hover {
-  box-shadow: 0.0625rem 0.125rem 0.3125rem #333;
+  box-shadow: 1px 2px 5px #333;
 }
 
 #modal-container {
@@ -128,26 +128,26 @@ header .misc-container .icon {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 50%;
-  min-width: 320px;
-  max-width: 600px;
+  min-width: 20rem;
+  max-width: 37.5rem;
   background-color: #fff;
-  border-radius: 5px;
-  padding: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 0.3125rem;
+  padding: 1.25rem;
+  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.5);
 }
 #modal-container .modal .modal-content .modal-label {
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   text-align: center;
 }
 #modal-container .modal .modal-content .modal-label h2 {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #333;
   margin: 0;
 }
 #modal-container .modal .modal-content .fechar {
-  font-size: 50px;
+  font-size: 3.125rem;
   color: #333;
   cursor: pointer;
 }
@@ -160,9 +160,9 @@ header .misc-container .icon {
 }
 #modal-container .modal .modal-content table th,
 #modal-container .modal .modal-content table td {
-  padding: 10px;
+  padding: 0.625rem;
   text-align: left;
-  border-bottom: 1px solid #fff;
+  border-bottom: 0.0625rem solid #fff;
 }
 #modal-container .modal .modal-content table th:last-child,
 #modal-container .modal .modal-content table td:last-child {
@@ -195,12 +195,12 @@ header .misc-container .icon {
 }
 .banner-container .banner-block {
   display: flex;
-  border-radius: 0.3125rem;
+  border-radius: 5px;
   background-color: #006699;
-  box-shadow: 0.0625rem 0.125rem 0.3125rem #333;
+  box-shadow: 1px 2px 5px #333;
 }
 .banner-container img {
-  max-width: 900px;
+  max-width: 56.25rem;
   width: 100%;
 }
 .banner-container .about-container {
@@ -208,8 +208,8 @@ header .misc-container .icon {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
   background-color: #006699;
 }
 .banner-container .about-container h3 {
@@ -218,34 +218,34 @@ header .misc-container .icon {
 }
 .banner-container .about-container .about-btn a {
   color: #006699;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
   background-color: #fff;
-  border-radius: 0.1875rem;
+  border-radius: 3px;
 }
 
 .contact-container {
   width: 70%;
-  max-width: 1200px;
+  max-width: 75rem;
   margin: 0 auto;
 }
-@media (max-width: 768px) {
+@media (max-width: 48.0625rem) {
   .contact-container {
-    max-width: 769px;
-    padding: 0 20px;
+    max-width: 48.0625rem;
+    padding: 0 1.25rem;
   }
 }
 .contact-container .contact-block {
-  border: 2px solid #006699;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px 0;
+  border: 0.125rem solid #006699;
+  border-radius: 0.625rem;
+  padding: 1.25rem;
+  margin: 1.25rem 0;
 }
 .contact-container .h1-container {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 .contact-container .h1-container h1 {
   color: #006699;
@@ -258,19 +258,19 @@ header .misc-container .icon {
   margin: 0;
 }
 .contact-container fieldset .block {
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 .contact-container fieldset .block label {
   font-weight: bold;
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
   color: #333;
 }
 .contact-container fieldset .block .input {
   width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #333;
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid #333;
   font-size: 1em;
   color: #333;
   box-sizing: border-box;
@@ -282,31 +282,31 @@ header .misc-container .icon {
 .contact-container fieldset .block .radio-block,
 .contact-container fieldset .block .checkbox-block {
   display: inline-block;
-  margin-left: 10px;
-  margin-right: 20px;
+  margin-left: 0.625rem;
+  margin-right: 1.25rem;
 }
 .contact-container fieldset .block .radio-block input[type=radio],
 .contact-container fieldset .block .radio-block input[type=checkbox],
 .contact-container fieldset .block .checkbox-block input[type=radio],
 .contact-container fieldset .block .checkbox-block input[type=checkbox] {
-  margin-right: 5px;
+  margin-right: 0.3125rem;
 }
 .contact-container fieldset .block .radio-block label,
 .contact-container fieldset .block .checkbox-block label {
   display: inline-block;
   color: #333;
-  margin-right: 10px;
-  margin-bottom: 5px;
+  margin-right: 0.625rem;
+  margin-bottom: 0.3125rem;
 }
 .contact-container fieldset .file label[for=myfile] {
   display: inline-block;
-  padding: 12px 20px;
+  padding: 0.75rem 1.25rem;
   background-color: #0277bd;
   color: #fff;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
-  border-radius: 5px;
-  height: 15px;
+  border-radius: 0.3125rem;
+  height: 0.9375rem;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
@@ -318,15 +318,15 @@ header .misc-container .icon {
 }
 .contact-container fieldset .message label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
   color: #333;
   font-weight: bold;
 }
 .contact-container fieldset .message textarea {
   width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #333;
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid #333;
   box-sizing: border-box;
   font-size: 1em;
   color: #333;
@@ -336,17 +336,17 @@ header .misc-container .icon {
   border-color: #0277bd;
 }
 .contact-container fieldset .send-btn {
-  margin-top: 10px;
+  margin-top: 0.625rem;
 }
 .contact-container fieldset .send-btn input[type=submit] {
   background-color: #0277bd;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
   font-size: 1em;
   font-weight: bold;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -359,69 +359,69 @@ header .misc-container .icon {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  border-top: 0.0625rem solid #333;
+  border-top: 1px solid #333;
 }
 .footer-container h4 {
   font-weight: 300;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 75rem) {
   .banner-block {
     flex-direction: column;
-    padding-bottom: 40px;
+    padding-bottom: 2.5rem;
   }
 }
-@media (max-width: 1050px) {
+@media (max-width: 65.625rem) {
   header .person-icon {
-    font-size: 22px;
-    margin-left: 10px;
-    margin-right: 5px;
+    font-size: 1.375rem;
+    margin-left: 0.625rem;
+    margin-right: 0.3125rem;
   }
   header .cart-icon {
-    font-size: 22px;
-    margin-left: 10px;
-    margin-right: 5px;
+    font-size: 1.375rem;
+    margin-left: 0.625rem;
+    margin-right: 0.3125rem;
   }
 }
-@media (max-width: 769px) {
+@media (max-width: 48.0625rem) {
   header .logo-container .dell-logo {
-    max-width: 0rem;
+    max-width: 0px;
     width: 100%;
   }
   header .person-icon {
-    font-size: 15px;
-    margin-left: 10px;
-    margin-right: 5px;
+    font-size: 0.9375rem;
+    margin-left: 0.625rem;
+    margin-right: 0.3125rem;
   }
   header .cart-icon {
-    font-size: 15px;
-    margin-left: 10px;
-    margin-right: 5px;
+    font-size: 0.9375rem;
+    margin-left: 0.625rem;
+    margin-right: 0.3125rem;
   }
 }
-@media (max-width: 556px) {
+@media (max-width: 34.75rem) {
   header .misc-container {
     display: flex;
     justify-content: space-between;
   }
   header .misc-container .icon {
-    font-size: 22.4px;
+    font-size: 1.4rem;
   }
   .banner-container {
-    margin: 15px;
+    margin: 0.9375rem;
     text-align: center;
   }
   .main-container {
-    margin: 15px;
+    margin: 0.9375rem;
     text-align: center;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 28.125rem) {
   .website-container {
-    grid-template-rows: 50px 700px 500px 900px 48px;
+    grid-template-rows: 3.125rem 43.75rem 31.25rem 56.25rem 3rem;
   }
   footer {
-    margin-top: 8px;
+    margin-top: 0.5rem;
   }
 }
 

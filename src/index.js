@@ -30,7 +30,7 @@ function checkboxCheck() {
 
 const form = document.querySelector("#contact-form");
 form.addEventListener("submit", function (event) {
-  event.preventDefault(); // Impede que o form seja enviado
+  event.preventDefault();
 
   const nameField = document.querySelector("#name");
   if (nameField.value === "") {
