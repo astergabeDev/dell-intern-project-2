@@ -1,3 +1,11 @@
+$primary-color: #006699;
+$secondary-color: #0277bd;
+$text-color: #333;
+
+$mobile: 769px;
+$tablet: 1050px;
+$desktop: 1200px;
+
 html,
 body {
   margin: 0rem;
@@ -5,11 +13,6 @@ body {
   box-sizing: border-box;
   max-width: 100%;
   font-family: Arial, Helvetica, sans-serif;
-}
-:root {
-  --grey: grey;
-  --darkblue: #00447c;
-  --lightblue: #0075d5;
 }
 .website-container {
   display: grid;
@@ -22,10 +25,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 0.0625rem solid var(--grey);
+  border-bottom: 0.0625rem solid $text-color;
   ion-icon {
     font-size: 30px;
-    color: var(--grey);
+    color: $text-color;
   }
   .logo-container {
     .dell-logo {
@@ -54,7 +57,7 @@ header {
     justify-content: space-between;
     padding: 5px;
     background-color: white;
-    border: 0.0625rem solid var(--grey);
+    border: 0.0625rem solid $text-color;
     border-radius: 3px;
     width: 100%;
     max-width: 520px;
@@ -102,13 +105,13 @@ header {
   }
   .right a {
     background-color: #fff;
-    color: var(--darkblue);
-    border: 0.125rem solid var(--darkblue);
+    color: $primary-color;
+    border: 0.125rem solid $primary-color;
   }
   .left a {
-    background-color: var(--darkblue);
+    background-color: $primary-color;
     color: #fff;
-    border: 0.125rem solid var(--darkblue);
+    border: 0.125rem solid $primary-color;
   }
 
   .buy-btn a:hover {
@@ -119,48 +122,93 @@ header {
   display: none;
   .modal {
     position: fixed;
-    z-index: 1;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 99999;
+    background-color: rgba(0, 0, 0, 0.7);
+
     .modal-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background-color: #fefefe;
-      margin: 10% auto;
-      padding: 1.25rem;
-      border: 0.0625rem solid #888;
-      width: 80%;
-      .table {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50%;
+      min-width: 320px;
+      max-width: 600px;
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+
+      .modal-label {
+        align-items: center;
+        margin-bottom: 20px;
         text-align: center;
-        border: 0.0625rem solid #00447c;
-        border-radius: 0.3125rem;
-        .thead {
-          border: 0.0625rem solid #00447c;
+        h2 {
+          font-size: 24px;
+          font-weight: 700;
+          color: $text-color;
+          margin: 0;
         }
       }
-      .modal-label {
-        text-align: center;
-        color: #00447c;
-        border-radius: 0.3125rem;
-        border: 0.0625rem solid var(--darkblue);
-        margin-bottom: 0.3125rem;
-      }
       .fechar {
-        color: #aaa;
-        float: right;
-        font-size: 1.75rem;
-        font-weight: bold;
-      }
-      .fechar:hover,
-      .fechar:focus {
-        color: black;
-        text-decoration: none;
+        font-size: 50px;
+        color: $text-color;
         cursor: pointer;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+
+        th,
+        td {
+          padding: 10px;
+          text-align: left;
+          border-bottom: 1px solid #fff;
+
+          &:last-child {
+            text-align: center;
+          }
+        }
+
+        thead {
+          th {
+            font-weight: 700;
+            color: $text-color;
+          }
+        }
+
+        tbody {
+          tr {
+            &:hover {
+              background-color: $primary-color;
+              color: #fff;
+
+              a {
+                color: #fff;
+              }
+            }
+
+            td {
+              a {
+                color: $primary-color;
+                text-decoration: none;
+                transition: color 0.2s;
+
+                &:hover {
+                  color: #fff;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -172,7 +220,7 @@ header {
   .banner-block {
     display: flex;
     border-radius: 0.3125rem;
-    background-color: var(--darkblue);
+    background-color: $primary-color;
     box-shadow: 0.0625rem 0.125rem 0.3125rem #333;
   }
   img {
@@ -186,14 +234,14 @@ header {
     align-items: center;
     margin-left: 40px;
     margin-right: 40px;
-    background-color: var(--darkblue);
+    background-color: $primary-color;
     h3 {
       color: #fff;
       font-weight: 300;
     }
     .about-btn {
       a {
-        color: var(--darkblue);
+        color: $primary-color;
         font-size: 16px;
         font-weight: 400;
         text-decoration: none;
@@ -205,72 +253,147 @@ header {
   }
 }
 .contact-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  width: 70%;
+  max-width: $desktop;
+  margin: 0 auto;
+
+  @media (max-width: $mobile - 1) {
+    max-width: $mobile;
+    padding: 0 20px;
+  }
   .contact-block {
-    max-width: 43.75rem;
-    width: 100%;
-    background-color: var(--darkblue);
-    box-shadow: 0.0625rem 0.125rem 0.3125rem #333;
-    border-radius: 0.3125rem;
-    fieldset {
-      border: none;
+    border: 2px solid $primary-color;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+  }
+
+  .h1-container {
+    text-align: center;
+    margin-bottom: 20px;
+
+    h1 {
+      color: $primary-color;
+      font-size: 2em;
+      font-weight: bold;
     }
-    .h1-container {
-      margin-bottom: 20px;
-      width: 100%;
-      h1 {
-        text-align: center;
-        color: #fff;
-        font-weight: 300;
+  }
+
+  fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+
+    .block {
+      margin-bottom: 10px;
+
+      label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        color: $text-color;
+      }
+
+      .input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid $text-color;
+        font-size: 1em;
+        color: $text-color;
+        box-sizing: border-box;
+
+        &:focus {
+          outline: none;
+          border-color: $secondary-color;
+        }
+      }
+
+      .radio-block,
+      .checkbox-block {
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 20px;
+
+        input[type="radio"],
+        input[type="checkbox"] {
+          margin-right: 5px;
+        }
+
+        label {
+          display: inline-block;
+          color: $text-color;
+          margin-right: 10px;
+          margin-bottom: 5px;
+        }
       }
     }
-    .block {
-      margin-bottom: 30px;
-    }
+
     .file {
-      color: #fff;
-      display: flex;
-      flex-direction: column;
+      label[for="myfile"] {
+        display: inline-block;
+        padding: 12px 20px;
+        background-color: $secondary-color;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 5px;
+        height: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      label[for="myfile"]:hover {
+        background-color: #004e8c;
+      }
+
+      input[type="file"] {
+        display: none;
+      }
     }
-    .input {
-      border: vertical;
-      font-size: 20px;
-      width: 100%;
-      min-height: 45px;
-      height: 100%;
-      box-sizing: border-box;
-    }
+
     .message {
-      resize: none;
-      min-height: 100px;
-      font-family: sans-serif;
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: $text-color;
+        font-weight: bold;
+      }
+
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid $text-color;
+        box-sizing: border-box;
+        font-size: 1em;
+        color: $text-color;
+
+        &:focus {
+          outline: none;
+          border-color: $secondary-color;
+        }
+      }
     }
-    .name {
-      min-height: 45px;
-    }
-    .contact-label {
-      font-weight: 400;
-      color: #fff;
-    }
+
     .send-btn {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 50px;
-      border-radius: 0.1875rem;
-      text-align: center;
-      background-color: #fff;
-      border: 0.0625rem solid var(--darkblue);
-      input {
-        background: none;
+      margin-top: 10px;
+
+      input[type="submit"] {
+        background-color: $secondary-color;
+        color: white;
         border: none;
-        color: var(--darkblue);
-        font-size: 20px;
-        font-weight: 600;
-        text-decoration: none;
+        padding: 10px 20px;
+        font-size: 1em;
+        font-weight: bold;
+        width: 100%;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+          background-color: $primary-color;
+        }
       }
     }
   }
@@ -280,18 +403,18 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  border-top: 0.0625rem solid var(--grey);
+  border-top: 0.0625rem solid $text-color;
   h4 {
     font-weight: 300;
   }
 }
-@media (max-width: 1150px) {
+@media (max-width: $desktop) {
   .banner-block {
     flex-direction: column;
     padding-bottom: 40px;
   }
 }
-@media (max-width: 1050px) {
+@media (max-width: $tablet) {
   header {
     .person-icon {
       font-size: 22px;
@@ -305,7 +428,7 @@ header {
     }
   }
 }
-@media (max-width: 769px) {
+@media (max-width: $mobile) {
   header {
     .logo-container {
       .dell-logo {
@@ -324,11 +447,6 @@ header {
       margin-right: 5px;
     }
   }
-  .contact-container {
-    .contact-block {
-      max-width: 400px;
-    }
-  }
 }
 @media (max-width: 556px) {
   header {
@@ -344,16 +462,7 @@ header {
     margin: 15px;
     text-align: center;
   }
-  .contact-container {
-    .contact-block {
-      padding: 5px;
-      max-width: 400px;
-    }
-    margin: 15px;
-    .h1-container {
-      justify-self: center;
-    }
-  }
+
   .main-container {
     margin: 15px;
     text-align: center;
@@ -365,94 +474,5 @@ header {
   }
   footer {
     margin-top: 8px;
-  }
-}
-.login-body {
-  display: flex;
-  align-self: center;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
-  margin: 0;
-  .login-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    .login-block {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background-color: var(--darkblue);
-      box-shadow: 0.0625rem 0.125rem 0.3125rem #333;
-      border-radius: 0.3125rem;
-      width: 600px;
-      .login-title {
-        justify-self: start;
-        margin: 0 0.8rem 0.8rem 0.8rem;
-        color: white;
-      }
-      .login-form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-top: 16px;
-        width: 93%;
-        #birthdate {
-          width: 40%;
-        }
-        .name-input {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          width: 100%;
-          .first-name {
-            width: 45%;
-          }
-          .last-name {
-            width: 45%;
-          }
-        }
-        .login-input {
-          border-radius: 0.3rem;
-          margin-bottom: 20px;
-          width: 100%;
-          height: 32px;
-
-          input {
-            border: none;
-            border-bottom: 0.0625rem solid #fff;
-            background-color: var(--darkblue);
-            color: #fff;
-            font-size: 20px;
-            font-weight: 300;
-            width: 240px;
-          }
-        }
-        .login-btn {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 50px;
-          width: 40%;
-          border-radius: 0.1875rem;
-          text-align: center;
-          background-color: #fff;
-          border: 0.0625rem solid var(--darkblue);
-          margin-bottom: 1rem;
-          input {
-            background: none;
-            border: none;
-            color: var(--darkblue);
-            font-size: 20px;
-            font-weight: 600;
-            text-decoration: none;
-          }
-        }
-      }
-    }
   }
 }

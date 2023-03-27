@@ -1,4 +1,3 @@
-
 function isValidEmail(email) {
   const emailChar = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -33,7 +32,6 @@ const form = document.querySelector("#contact-form");
 form.addEventListener("submit", function (event) {
   event.preventDefault(); // Impede que o form seja enviado
 
- 
   const nameField = document.querySelector("#name");
   if (nameField.value === "") {
     alert("Please, type your name.");
@@ -58,52 +56,6 @@ form.addEventListener("submit", function (event) {
   window.location.href = "login.html";
 });
 
-function validarForm() {
-  var senha = document.getElementById("password").value;
-  var confirmSenha = document.getElementById("confirmPassword").value;
-  var senhaErro = document.getElementById("senhaErro");
-
-  if (senha !== confirmSenha) {
-    senhaErro.innerHTML = "As senhas não coincidem!";
-    return false;
-  } else {
-    senhaErro.innerHTML = "";
-    window.location.href = "index.html";
-    alert("Cadastro feito com sucesso!");
-    return true;
-  }
-}
-
-function limparFormulario() {
-  document.getElementById("cadastroForm").reset();
-  document.getElementById("username").value = "";
-}
-
-function atualizarUsername() {
-  var firstNameInput = document.getElementById("firstName").value;
-  var lastNameInput = document.getElementById("lastName").value;
-  var usernameInput = document.getElementById("username");
-
-  usernameInput.value = (firstNameInput + lastNameInput)
-    .toLowerCase()
-    .replace(/\s+/g, "");
-}
-var birthdateInput = document.getElementById("birthdate");
-var dataErro = document.getElementById("dataErro");
-
-birthdateInput.addEventListener("input", validarData);
-
-function validarData() {
-  var birthdate = new Date(birthdateInput.value);
-  var hoje = new Date();
-
-  if (birthdate > hoje) {
-    dataErro.innerHTML =
-      "A data de aniversário não pode ser posterior ao dia de hoje!";
-  } else {
-    dataErro.innerHTML = "";
-  }
-}
 function abrirModal() {
   document.getElementById("modal-container").style.display = "block";
 }
@@ -111,4 +63,3 @@ function abrirModal() {
 function fecharModal() {
   document.getElementById("modal-container").style.display = "none";
 }
-

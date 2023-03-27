@@ -7,12 +7,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-:root {
-  --grey: grey;
-  --darkblue: #00447c;
-  --lightblue: #0075d5;
-}
-
 .website-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -25,11 +19,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 0.0625rem solid var(--grey);
+  border-bottom: 0.0625rem solid #333;
 }
 header ion-icon {
   font-size: 30px;
-  color: var(--grey);
+  color: #333;
 }
 header .logo-container .dell-logo {
   max-width: 250px;
@@ -56,7 +50,7 @@ header .input-container {
   justify-content: space-between;
   padding: 5px;
   background-color: white;
-  border: 0.0625rem solid var(--grey);
+  border: 0.0625rem solid #333;
   border-radius: 3px;
   width: 100%;
   max-width: 520px;
@@ -104,13 +98,13 @@ header .misc-container .icon {
 }
 .main-container .right a {
   background-color: #fff;
-  color: var(--darkblue);
-  border: 0.125rem solid var(--darkblue);
+  color: #006699;
+  border: 0.125rem solid #006699;
 }
 .main-container .left a {
-  background-color: var(--darkblue);
+  background-color: #006699;
   color: #fff;
-  border: 0.125rem solid var(--darkblue);
+  border: 0.125rem solid #006699;
 }
 .main-container .buy-btn a:hover {
   box-shadow: 0.0625rem 0.125rem 0.3125rem #333;
@@ -121,50 +115,77 @@ header .misc-container .icon {
 }
 #modal-container .modal {
   position: fixed;
-  z-index: 1;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 99999;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 #modal-container .modal .modal-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #fefefe;
-  margin: 10% auto;
-  padding: 1.25rem;
-  border: 0.0625rem solid #888;
-  width: 80%;
-}
-#modal-container .modal .modal-content .table {
-  text-align: center;
-  border: 0.0625rem solid #00447c;
-  border-radius: 0.3125rem;
-}
-#modal-container .modal .modal-content .table .thead {
-  border: 0.0625rem solid #00447c;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  min-width: 320px;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 #modal-container .modal .modal-content .modal-label {
+  align-items: center;
+  margin-bottom: 20px;
   text-align: center;
-  color: #00447c;
-  border-radius: 0.3125rem;
-  border: 0.0625rem solid var(--darkblue);
-  margin-bottom: 0.3125rem;
+}
+#modal-container .modal .modal-content .modal-label h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
 }
 #modal-container .modal .modal-content .fechar {
-  color: #aaa;
-  float: right;
-  font-size: 1.75rem;
-  font-weight: bold;
-}
-#modal-container .modal .modal-content .fechar:hover,
-#modal-container .modal .modal-content .fechar:focus {
-  color: black;
-  text-decoration: none;
+  font-size: 50px;
+  color: #333;
   cursor: pointer;
+}
+#modal-container .modal .modal-content .fechar:hover {
+  color: #006699;
+}
+#modal-container .modal .modal-content table {
+  width: 100%;
+  border-collapse: collapse;
+}
+#modal-container .modal .modal-content table th,
+#modal-container .modal .modal-content table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #fff;
+}
+#modal-container .modal .modal-content table th:last-child,
+#modal-container .modal .modal-content table td:last-child {
+  text-align: center;
+}
+#modal-container .modal .modal-content table thead th {
+  font-weight: 700;
+  color: #333;
+}
+#modal-container .modal .modal-content table tbody tr:hover {
+  background-color: #006699;
+  color: #fff;
+}
+#modal-container .modal .modal-content table tbody tr:hover a {
+  color: #fff;
+}
+#modal-container .modal .modal-content table tbody tr td a {
+  color: #006699;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+#modal-container .modal .modal-content table tbody tr td a:hover {
+  color: #fff;
 }
 
 .banner-container {
@@ -175,7 +196,7 @@ header .misc-container .icon {
 .banner-container .banner-block {
   display: flex;
   border-radius: 0.3125rem;
-  background-color: var(--darkblue);
+  background-color: #006699;
   box-shadow: 0.0625rem 0.125rem 0.3125rem #333;
 }
 .banner-container img {
@@ -189,14 +210,14 @@ header .misc-container .icon {
   align-items: center;
   margin-left: 40px;
   margin-right: 40px;
-  background-color: var(--darkblue);
+  background-color: #006699;
 }
 .banner-container .about-container h3 {
   color: #fff;
   font-weight: 300;
 }
 .banner-container .about-container .about-btn a {
-  color: var(--darkblue);
+  color: #006699;
   font-size: 16px;
   font-weight: 400;
   text-decoration: none;
@@ -206,75 +227,131 @@ header .misc-container .icon {
 }
 
 .contact-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  width: 70%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .contact-container {
+    max-width: 769px;
+    padding: 0 20px;
+  }
 }
 .contact-container .contact-block {
-  max-width: 43.75rem;
-  width: 100%;
-  background-color: var(--darkblue);
-  box-shadow: 0.0625rem 0.125rem 0.3125rem #333;
-  border-radius: 0.3125rem;
+  border: 2px solid #006699;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
 }
-.contact-container .contact-block fieldset {
-  border: none;
-}
-.contact-container .contact-block .h1-container {
-  margin-bottom: 20px;
-  width: 100%;
-}
-.contact-container .contact-block .h1-container h1 {
+.contact-container .h1-container {
   text-align: center;
-  color: #fff;
-  font-weight: 300;
+  margin-bottom: 20px;
 }
-.contact-container .contact-block .block {
-  margin-bottom: 30px;
+.contact-container .h1-container h1 {
+  color: #006699;
+  font-size: 2em;
+  font-weight: bold;
 }
-.contact-container .contact-block .file {
-  color: #fff;
-  display: flex;
-  flex-direction: column;
+.contact-container fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
 }
-.contact-container .contact-block .input {
-  border: vertical;
-  font-size: 20px;
+.contact-container fieldset .block {
+  margin-bottom: 10px;
+}
+.contact-container fieldset .block label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+.contact-container fieldset .block .input {
   width: 100%;
-  min-height: 45px;
-  height: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  font-size: 1em;
+  color: #333;
   box-sizing: border-box;
 }
-.contact-container .contact-block .message {
-  resize: none;
-  min-height: 100px;
-  font-family: sans-serif;
+.contact-container fieldset .block .input:focus {
+  outline: none;
+  border-color: #0277bd;
 }
-.contact-container .contact-block .name {
-  min-height: 45px;
+.contact-container fieldset .block .radio-block,
+.contact-container fieldset .block .checkbox-block {
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 20px;
 }
-.contact-container .contact-block .contact-label {
-  font-weight: 400;
+.contact-container fieldset .block .radio-block input[type=radio],
+.contact-container fieldset .block .radio-block input[type=checkbox],
+.contact-container fieldset .block .checkbox-block input[type=radio],
+.contact-container fieldset .block .checkbox-block input[type=checkbox] {
+  margin-right: 5px;
+}
+.contact-container fieldset .block .radio-block label,
+.contact-container fieldset .block .checkbox-block label {
+  display: inline-block;
+  color: #333;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+.contact-container fieldset .file label[for=myfile] {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #0277bd;
   color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  height: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
-.contact-container .contact-block .send-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  border-radius: 0.1875rem;
-  text-align: center;
-  background-color: #fff;
-  border: 0.0625rem solid var(--darkblue);
+.contact-container fieldset .file label[for=myfile]:hover {
+  background-color: #004e8c;
 }
-.contact-container .contact-block .send-btn input {
-  background: none;
+.contact-container fieldset .file input[type=file] {
+  display: none;
+}
+.contact-container fieldset .message label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: bold;
+}
+.contact-container fieldset .message textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  box-sizing: border-box;
+  font-size: 1em;
+  color: #333;
+}
+.contact-container fieldset .message textarea:focus {
+  outline: none;
+  border-color: #0277bd;
+}
+.contact-container fieldset .send-btn {
+  margin-top: 10px;
+}
+.contact-container fieldset .send-btn input[type=submit] {
+  background-color: #0277bd;
+  color: white;
   border: none;
-  color: var(--darkblue);
-  font-size: 20px;
-  font-weight: 600;
-  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.contact-container fieldset .send-btn input[type=submit]:hover {
+  background-color: #006699;
 }
 
 .footer-container {
@@ -282,13 +359,13 @@ header .misc-container .icon {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  border-top: 0.0625rem solid var(--grey);
+  border-top: 0.0625rem solid #333;
 }
 .footer-container h4 {
   font-weight: 300;
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
   .banner-block {
     flex-direction: column;
     padding-bottom: 40px;
@@ -321,9 +398,6 @@ header .misc-container .icon {
     margin-left: 10px;
     margin-right: 5px;
   }
-  .contact-container .contact-block {
-    max-width: 400px;
-  }
 }
 @media (max-width: 556px) {
   header .misc-container {
@@ -337,16 +411,6 @@ header .misc-container .icon {
     margin: 15px;
     text-align: center;
   }
-  .contact-container {
-    margin: 15px;
-  }
-  .contact-container .contact-block {
-    padding: 5px;
-    max-width: 400px;
-  }
-  .contact-container .h1-container {
-    justify-self: center;
-  }
   .main-container {
     margin: 15px;
     text-align: center;
@@ -359,94 +423,6 @@ header .misc-container .icon {
   footer {
     margin-top: 8px;
   }
-}
-.login-body {
-  display: flex;
-  align-self: center;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
-  margin: 0;
-}
-.login-body .login-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.login-body .login-container .login-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--darkblue);
-  box-shadow: 0.0625rem 0.125rem 0.3125rem #333;
-  border-radius: 0.3125rem;
-  width: 600px;
-}
-.login-body .login-container .login-block .login-title {
-  justify-self: start;
-  margin: 0 0.8rem 0.8rem 0.8rem;
-  color: white;
-}
-.login-body .login-container .login-block .login-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 16px;
-  width: 93%;
-}
-.login-body .login-container .login-block .login-form #birthdate {
-  width: 40%;
-}
-.login-body .login-container .login-block .login-form .name-input {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-}
-.login-body .login-container .login-block .login-form .name-input .first-name {
-  width: 45%;
-}
-.login-body .login-container .login-block .login-form .name-input .last-name {
-  width: 45%;
-}
-.login-body .login-container .login-block .login-form .login-input {
-  border-radius: 0.3rem;
-  margin-bottom: 20px;
-  width: 100%;
-  height: 32px;
-}
-.login-body .login-container .login-block .login-form .login-input input {
-  border: none;
-  border-bottom: 0.0625rem solid #fff;
-  background-color: var(--darkblue);
-  color: #fff;
-  font-size: 20px;
-  font-weight: 300;
-  width: 240px;
-}
-.login-body .login-container .login-block .login-form .login-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  width: 40%;
-  border-radius: 0.1875rem;
-  text-align: center;
-  background-color: #fff;
-  border: 0.0625rem solid var(--darkblue);
-  margin-bottom: 1rem;
-}
-.login-body .login-container .login-block .login-form .login-btn input {
-  background: none;
-  border: none;
-  color: var(--darkblue);
-  font-size: 20px;
-  font-weight: 600;
-  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */

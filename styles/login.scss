@@ -1,0 +1,140 @@
+html,
+body {
+  margin: 0rem;
+  padding: 0rem;
+  box-sizing: border-box;
+  max-width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+
+  .login-block {
+    width: 28.125rem;
+    padding: 2.5rem;
+    background-color: #fff;
+    border-radius: 0.625rem;
+    box-shadow: 0rem 0.3125rem 0.9375rem rgba(0, 0, 0, 0.1);
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      color: #0077b6;
+    }
+
+    .name-input {
+      display: flex;
+      justify-content: space-between;
+
+      .login-title {
+        width: 40%;
+        margin-right: 2.5%;
+      }
+
+      .login-input {
+        width: 57.5%;
+        box-sizing: border-box;
+      }
+    }
+
+    .login-title {
+      display: block;
+      margin-bottom: 0.625rem;
+      font-size: 1.125rem;
+      font-weight: 500;
+      color: #0077b6;
+    }
+
+    .login-input {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+      font-size: 16px;
+      color: #495057;
+      box-sizing: border-box;
+
+      &:focus {
+        outline: none;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    #senhaErro,
+    #dataErro {
+      color: red;
+      margin-bottom: 10px;
+    }
+
+    .login-btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #0077b6;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #006699;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .login-container {
+    height: auto;
+    padding: 2rem;
+  }
+
+  .login-block {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+
+  .name-input {
+    flex-direction: column;
+
+    .login-title {
+      width: 100%;
+    }
+
+    .login-input {
+      width: 100%;
+    }
+  }
+}
+@media only screen and (min-width: 577px) {
+  .login-container {
+    height: 100vh;
+    padding: 0;
+  }
+
+  .login-block {
+    width: 28.125rem;
+    padding: 2.5rem;
+  }
+
+  .name-input {
+    flex-direction: row;
+
+    .login-title {
+      width: 45%;
+    }
+
+    .login-input {
+      width: 50%;
+    }
+  }
+}

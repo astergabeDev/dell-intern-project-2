@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="stylesheet" href="/styles/login.css">
 
   <title>Login - Dell Technologies</title>
 </head>
@@ -15,38 +15,35 @@
 <body class="login-body">
   <div class="login-container">
     <div class="login-block">
-      <form id="cadastroForm" class="login-form" action="#" onsubmit="return validarForm()">
-        <div class="name-input">
-          <label class="login-title" for="firstName">First Name:</label>
-          <input class="login-input" type="text" id="firstName" name="firstName" required>
+      <form id="cadastroForm" class="login-form" action="#">
+        <label class="login-title" for="firstName">First Name:</label>
+        <input class="login-input" type="text" id="firstName" name="firstName">
 
-          <label class="login-title" for="lastName">Last Name:</label>
-          <input class="login-input" type="text" id="lastName" name="lastName" required>
-        </div>
+        <label class="login-title" for="lastName">Last Name:</label>
+        <input class="login-input" type="text" id="lastName" name="lastName">
 
         <label class="login-title" for="birthdate">Birthdate:</label>
-        <input class="login-input" type="date" id="birthdate" name="birthdate" max="2023-12-31" required>
+        <input class="login-input" type="date" id="birthdate" name="birthdate" max="2023-12-31">
 
         <label class="login-title" for="username">Username:</label>
-        <input class="login-input" type="text" id="username" name="username" onfocus="atualizarUsername()" readonly
-          required>
+        <input class="login-input" type="text" id="username" name="username" onfocus="atualizarUsername()" readonly>
 
         <label class="login-title" for="password">Password:</label>
-        <input class="login-input" type="password" id="password" name="password" required>
+        <input class="login-input" type="password" id="password" name="password">
 
         <label class="login-title" for="confirmPassword">Confirm Password:</label>
-        <input class="login-input" type="password" id="confirmPassword" name="confirmPassword" required>
+        <input class="login-input" type="password" id="confirmPassword" name="confirmPassword">
+        <div id="senhaErro"></div>
+        <div id="dataErro"></div>
 
-        <input class="login-btn" type="submit" value="Enviar">
-        <input class="login-btn" type="button" value="Limpar Formulário" onclick="limparFormulario()">
+        <input class="login-btn" type="submit" value="Submit">
+        <input class="login-btn" type="button" value="Clear Form" onclick="limparFormulario()">
 
       </form>
     </div>
   </div>
-  <div id="senhaErro" class="error"></div>
-  <div id="dataErro" class="error"></div>
 
-  <script src="/src/index.js">
+  <script src="/src/login.js">
   </script>
 </body>
 
