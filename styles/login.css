@@ -1,7 +1,7 @@
 html,
 body {
-  margin: 0rem;
-  padding: 0rem;
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
   max-width: 100%;
   font-family: Arial, Helvetica, sans-serif;
@@ -15,15 +15,15 @@ body {
   background-color: #f2f2f2;
 }
 .login-container .login-block {
-  width: 28.125rem;
-  padding: 2.5rem;
+  width: 450px;
+  padding: 40px;
   background-color: #fff;
-  border-radius: 0.625rem;
-  box-shadow: 0rem 0.3125rem 0.9375rem rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
 }
 .login-container .login-block h1 {
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 40px;
   color: #0077b6;
 }
 .login-container .login-block .name-input {
@@ -40,59 +40,59 @@ body {
 }
 .login-container .login-block .login-title {
   display: block;
-  margin-bottom: 0.625rem;
-  font-size: 1.125rem;
+  margin-bottom: 10px;
+  font-size: 18px;
   font-weight: 500;
   color: #0077b6;
 }
 .login-container .login-block .login-input {
   display: block;
   width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
+  padding: 0.625rem;
+  margin-bottom: 1.25rem;
   border: none;
-  border-radius: 5px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-  font-size: 16px;
+  border-radius: 0.3125rem;
+  box-shadow: 0rem 0.3125rem 0.9375rem rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
   color: #495057;
   box-sizing: border-box;
 }
 .login-container .login-block .login-input:focus {
   outline: none;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0rem 0.3125rem 0.9375rem rgba(0, 0, 0, 0.2);
 }
 .login-container .login-block .login-input.error {
-  border: 0.0625rem solid red;
+  border: 1px solid red;
 }
-.login-container .login-block #senhaErro,
-.login-container .login-block #dataErro {
+.login-container .login-block #passError,
+.login-container .login-block #dateError {
   color: red;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 .login-container .login-block .login-btn {
   display: block;
   width: 100%;
-  padding: 10px;
-  margin-top: 20px;
+  padding: 0.625rem;
+  margin-top: 1.25rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   background-color: #0077b6;
   color: #fff;
-  font-size: 16px;
+  font-size: 1rem;
   cursor: pointer;
 }
 .login-container .login-block .login-btn:hover {
   background-color: #006699;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 36rem) {
   .login-container {
     height: auto;
-    padding: 2rem;
+    padding: 32px;
   }
   .login-block {
     width: 100%;
-    padding: 2rem 1rem;
+    padding: 32px 16px;
   }
   .name-input {
     flex-direction: column;
@@ -104,14 +104,14 @@ body {
     width: 100%;
   }
 }
-@media only screen and (min-width: 577px) {
+@media only screen and (min-width: 36.0625rem) {
   .login-container {
     height: 100vh;
     padding: 0;
   }
   .login-block {
-    width: 28.125rem;
-    padding: 2.5rem;
+    width: 450px;
+    padding: 40px;
   }
   .name-input {
     flex-direction: row;

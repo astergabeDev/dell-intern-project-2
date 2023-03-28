@@ -16,37 +16,42 @@ loginForm.addEventListener("submit", function (event) {
   if (emptyFields.length > 0) {
     return false;
   }
+  var input = document.getElementById("birthdate").value;
+  var date = new Date(input);
 
-  var senha = document.getElementById("password").value;
-  var confirmSenha = document.getElementById("confirmPassword").value;
-  var senhaErro = document.getElementById("senhaErro");
+  if (isNaN(date.getTime())) {
+    dateError.innerHTML = "Please, select a valid birthdate.";
+    return false;
+  }
 
-  if (senha !== confirmSenha) {
-    senhaErro.innerHTML = "Passwords do not match!";
+  var today = new Date();
+  if (date > today) {
+    dateError.innerHTML = "Please, select a birthdate prior today.";
     return false;
   } else {
-    senhaErro.innerHTML = "";
-    window.location.href = "index.html";
-    alert("Registration done successfully!");
-    return true;
+    dateError.innerHTML = "";
   }
+  var pass = document.getElementById("password").value;
+  var confirmPass = document.getElementById("confirmPassword").value;
+  var passError = document.getElementById("passError");
+
+  if (pass !== confirmPass) {
+    passError.innerHTML = "Passwords do not match!";
+    return false;
+  } else {
+    passError.innerHTML = "";
+  }
+  alert("Registration done successfully!");
+  window.location.href = "index.html";
+  return true;
 });
 
-function limparFormulario() {
+function clearForm() {
   document.getElementById("cadastroForm").reset();
   document.getElementById("username").value = "";
 }
-function validarData() {
-  var birthdate = new Date(birthdateInput.value);
-  var hoje = new Date();
 
-  if (birthdate > hoje) {
-    dataErro.innerHTML = "The birth date needs to be prior today";
-  } else {
-    dataErro.innerHTML = "";
-  }
-}
-function atualizarUsername() {
+function updateUsername() {
   var firstNameInput = document.getElementById("firstName").value;
   var lastNameInput = document.getElementById("lastName").value;
   var usernameInput = document.getElementById("username");

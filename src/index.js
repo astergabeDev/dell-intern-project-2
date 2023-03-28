@@ -56,10 +56,10 @@ form.addEventListener("submit", function (event) {
   window.location.href = "login.html";
 });
 
-function abrirModal() {
+function openModal() {
   document.getElementById("modal-container").style.display = "block";
 }
 
-function fecharModal() {
+function closeModal() {
   document.getElementById("modal-container").style.display = "none";
 }

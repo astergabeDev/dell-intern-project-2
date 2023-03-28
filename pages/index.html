@@ -50,14 +50,14 @@
                     <a href="#" target="_blank">Buy XPS models</a>
                 </div>
                 <div class="buy-btn right" target="_blank">
-                    <a href="#" onclick="abrirModal()">View XPS models</a>
+                    <a href="#" onclick="openModal()">View XPS models</a>
                 </div>
             </div>
         </div>
         <div id="modal-container">
             <div id="modal" class="modal">
                 <div class="modal-content">
-                    <span class="fechar" onclick="fecharModal()">&times;</span>
+                    <span class="fechar" onclick="closeModal()">&times;</span>
                     <div class="modal-label">
                         <h2>All XPS models</h2>
                     </div>
@@ -73,17 +73,23 @@
                             <tr>
                                 <td>XPS 11</td>
                                 <td>R$ 3.000,00</td>
-                                <td><a href="#">View More</a></td>
+                                <td><a target="_blank"
+                                        href="https://www.dell.com/pt-br/shop/scc/sr/laptops/xps-laptops?gacd=9657105-15013-5761040-275878141-0&dgc=ST&cid=71700000100888097&gclid=CjwKCAjwoIqhBhAGEiwArXT7K9fzJskMbxhMlXRyIb5vJXlQOwnjKoEcphLDYI3wGPhpgc0t-AeHVhoCxhEQAvD_BwE&gclsrc=aw.ds&nclid=DZz-UNiNLf_aSzGyaBL-A9rQh-OplXnJqtn3LP6DbrlNCytfMYqCOKYs_DRsmAif">View
+                                        More</a></td>
                             </tr>
                             <tr>
                                 <td>XPS 12</td>
                                 <td>R$ 3.800,00</td>
-                                <td><a href="#">View More</a></td>
+                                <td><a target="_blank"
+                                        href="https://www.dell.com/pt-br/shop/scc/sr/laptops/xps-laptops?gacd=9657105-15013-5761040-275878141-0&dgc=ST&cid=71700000100888097&gclid=CjwKCAjwoIqhBhAGEiwArXT7K9fzJskMbxhMlXRyIb5vJXlQOwnjKoEcphLDYI3wGPhpgc0t-AeHVhoCxhEQAvD_BwE&gclsrc=aw.ds&nclid=DZz-UNiNLf_aSzGyaBL-A9rQh-OplXnJqtn3LP6DbrlNCytfMYqCOKYs_DRsmAif">View
+                                        More</a></td>
                             </tr>
                             <tr>
                                 <td>XPS 13</td>
                                 <td>R$ 4.500,00</td>
-                                <td><a href="#">View More</a></td>
+                                <td><a target="_blank"
+                                        href="https://www.dell.com/pt-br/shop/scc/sr/laptops/xps-laptops?gacd=9657105-15013-5761040-275878141-0&dgc=ST&cid=71700000100888097&gclid=CjwKCAjwoIqhBhAGEiwArXT7K9fzJskMbxhMlXRyIb5vJXlQOwnjKoEcphLDYI3wGPhpgc0t-AeHVhoCxhEQAvD_BwE&gclsrc=aw.ds&nclid=DZz-UNiNLf_aSzGyaBL-A9rQh-OplXnJqtn3LP6DbrlNCytfMYqCOKYs_DRsmAif">View
+                                        More</a></td>
                             </tr>
                         </tbody>
                     </table>
@@ -109,16 +115,16 @@
                 </div>
                 <fieldset>
                     <div class="name block">
-                        <label for="name" name="user_name" class="contact-label">Your Name</label>
+                        <label for="name" name="user_name" class="contact-label">Your Name *</label>
                         <input class="name input" type="text" id="name" name="user_name" placeholder="Your Name" />
                     </div>
                     <div class="email block">
-                        <label for="email" name="user_email" class="contact-label">Your Email</label>
+                        <label for="email" name="user_email" class="contact-label">Your Email *</label>
                         <input class="email input" type="email" id="email" name="user_email" placeholder="Your Email" />
                     </div>
                     <div class="radio block">
                         <label for="radio" class="contact-label">Are you a Dell
-                            Employee?</label>
+                            Employee? *</label>
                         <div class="radio-block">
                             <input type="radio" id="yes" name="radioGroup" value="yes">
                             <label class="contact-label" for="radio">Yes</label><br>
@@ -128,7 +134,7 @@
                     </div>
                     <div class="role block">
                         <label for="checkbox" class="contact-label">What role do you
-                            perform?</label>
+                            perform? *</label>
                         <div class="checkbox-block">
                             <input type="checkbox" id="design" name="checkboxGroup" value="design">
                             <label class="contact-label"> Design</label><br>
@@ -143,8 +149,8 @@
                         <input type="file" accept="application/pdf" id="myfile" name="myfile">
                     </div>
                     <div class="message block">
-                        <label for="message" id="message" name="user_name" class="contact-label">Your Message</label>
-                        <textarea id="message" class="message input" cols="30" rows="10"></textarea>
+                        <label for="message" id="message" name="user_name" class="contact-label">Your Message *</label>
+                        <textarea id="message" class="message input" cols="30" rows="10" spellcheck="false"></textarea>
                     </div>
                     <div class="send-btn">
                         <input type="submit" value="Send Feedback" />

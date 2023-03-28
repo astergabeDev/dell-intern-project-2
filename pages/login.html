@@ -16,28 +16,28 @@
   <div class="login-container">
     <div class="login-block">
       <form id="cadastroForm" class="login-form" action="#">
-        <label class="login-title" for="firstName">First Name:</label>
+        <label class="login-title" for="firstName">First Name: *</label>
         <input class="login-input" type="text" id="firstName" name="firstName">
 
-        <label class="login-title" for="lastName">Last Name:</label>
+        <label class="login-title" for="lastName">Last Name: *</label>
         <input class="login-input" type="text" id="lastName" name="lastName">
 
-        <label class="login-title" for="birthdate">Birthdate:</label>
-        <input class="login-input" type="date" id="birthdate" name="birthdate" max="2023-12-31">
+        <label class="login-title" for="birthdate">Birthdate: *</label>
+        <input class="login-input" type="date" id="birthdate" name="birthdate">
 
-        <label class="login-title" for="username">Username:</label>
-        <input class="login-input" type="text" id="username" name="username" onfocus="atualizarUsername()" readonly>
+        <label class="login-title" for="username">Username: *</label>
+        <input class="login-input" type="text" id="username" name="username" onfocus="updateUsername()" readonly>
 
-        <label class="login-title" for="password">Password:</label>
+        <label class="login-title" for="password">Password: *</label>
         <input class="login-input" type="password" id="password" name="password">
 
-        <label class="login-title" for="confirmPassword">Confirm Password:</label>
+        <label class="login-title" for="confirmPassword">Confirm Password: *</label>
         <input class="login-input" type="password" id="confirmPassword" name="confirmPassword">
-        <div id="senhaErro"></div>
-        <div id="dataErro"></div>
+        <div id="passError"></div>
+        <div id="dateError"></div>
 
         <input class="login-btn" type="submit" value="Submit">
-        <input class="login-btn" type="button" value="Clear Form" onclick="limparFormulario()">
+        <input class="login-btn" type="button" value="Clear Form" onclick="clearForm()">
 
       </form>
     </div>
